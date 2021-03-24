@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+		<title>DIVIDED</title>
+        
+		<link href="index.css" rel="stylesheet">
+        <link href="libs/hover.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" type="image/png" href="images/oil.ico"/>
+        
+        <!-----------------------------------------------
+        jQuery
+        ------------------------------------------------->
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
+        <!--Popper-->
+        <script src='https://unpkg.com/popper.js'></script>
+        <script src='https://unpkg.com/tooltip.js'></script>
+        
+        <!-----------------------------------------------
+        Fonts
+        ------------------------------------------------->
+        
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato|Libre+Baskerville|Playfair+Display:400,700,900|Raleway:bold" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/10c4434fb2.js" crossorigin="anonymous"></script>
+
+        
+        <!-----------------------------------------------
+        Bootstrap
+        ------------------------------------------------->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!-----------------------------------------------
+        ScrollMagic
+        ------------------------------------------------->
+        
+        <script src="libs/scrollmagic/uncompressed/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="libs/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+        <script src="libs/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+        <!-----------------------------------------------
+        Photo Sliders
+        ------------------------------------------------->
+        
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+        
+        <!-----------------------------------------------
+        Other
+        ------------------------------------------------->
+        
+        <script src="libs/Chart.js"></script>
+        <script src="libs/jquery.lettering.js"></script>
+        <script src="libs/howler.core.js"></script>
+        <script src="libs/vivus.js"></script>
+        <script src="libs/vivus.min.js"></script>
+        
+        <!-----------------------------------------------
+        Twitter
+        ------------------------------------------------->
+        
+        <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+        
+        <!-----------------------------------------------
+        Swiper
+        ------------------------------------------------->
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        
+	</head>
+
+	<body style="background-color:var(--primary-background-color)" data-spy="scroll" data-target="#mainNav" data-offset="0">
+        <div>
+            <nav id="sidebar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow:1px 1px 5px 1px; opacity:1">
+                <div id="progressBar length100"></div>
+                
+                <a class="navbar-brand" href="#"><img src="images/oil.png" style="width:40px; margin-right:10px"></a>
+                <h3 id="navtext">Appendix | <span class='highlight2'> Reporter's Notes</span></h3>
+                <div id="socialbar" class="col-3 ml-auto align-self-end">
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20MRP%20by%20Dexter%20McMillan.">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="btn dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-custom animate slideIn" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="index.html#">Introduction</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="index.html#segment1">La Grève du Climat</a>
+                        <a class="dropdown-item" href="index.html#segment2">The Green New Deal</a>
+                        <a class="dropdown-item" href="index.html/#segment3">Lloydminster</a>
+                        <a class="dropdown-item" href="index.html#segment4">The Scandinavian Way</a>
+                        <a class="dropdown-item" href="index.html#segment5">The Liberal Policy</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="notes.html">Reporter's Notes</a>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <div id="segment7" class="segment container-fluid">
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle7" class="sectionhead"><span class="highlight">IV.</span> Reporter's Notes<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p>A happy coincidence of doing this reporting is that I was able to do so without taking a plane at all. Planes are responsible for a massive amount of GHG emissions, so I travelled by car and train to get where I needed to go.</p>
+                    <p>Driving across Canada is a fantastic experience, but das I hit Manitoba, I hit the nastiest rain storm I had ever seen.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-----------------------------------------------
+        Site Javascript
+        ------------------------------------------------->
+        
+        <script src="index.js"></script>
+        
+        <!-----------------------------------------------
+        Bootstrap v4.1.3
+        ------------------------------------------------->
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <!-----------------------------------------------
+        Assorted Libraries
+        ------------------------------------------------->
+        
+        <!--VideoJS - For loading "animated images."-->
+        <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+        <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+        
+        <!--WayPoints-->
+        <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.0/lib/noframework.waypoints.min.js"></script>
+        
+        <!--Modernizr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	</body>
+</html>

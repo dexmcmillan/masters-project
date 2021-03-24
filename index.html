@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+	<head>
+
+		<title>DIVIDED</title>
+
+		<link href="divided.css" rel="stylesheet">
+        <link href="libs/hover.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="images/oil.ico"/>
+
+        <!--
+        jQuery
+        ------------------------------------------------->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <!--Popper-->
+        <script src='https://unpkg.com/popper.js'></script>
+        <script src='https://unpkg.com/tooltip.js'></script>
+
+        <!--
+        Fonts
+        ------------------------------------------------->
+
+        <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather|Lato|Libre+Baskerville|Playfair+Display:400,700,900|Raleway:bold" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/10c4434fb2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/sww7hnf.css">
+
+        <!--
+        Bootstrap
+        ------------------------------------------------->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!--
+        ScrollMagic
+        ------------------------------------------------->
+
+        <script src="libs/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="libs/animation.gsap.min.js"></script>
+
+        <!-----------------------------------------------
+        Other
+        ------------------------------------------------->
+
+        <script src="libs/Chart.js"></script>
+        <script src="libs/jquery.lettering.js"></script>
+        <script src="libs/vivus.js"></script>
+        <script src="libs/vivus.min.js"></script>
+
+        <!-- Lightgallery -->
+        <link rel="stylesheet" href="libs/lightgallery.css">
+        <link rel="stylesheet" href="libs/imagerow.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121914472-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-121914472-2');
+        </script>
+
+
+        <!-----------------------------------------------
+        Twitter
+        ------------------------------------------------->
+
+        <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+
+        <!-----------------------------------------------
+        Swiper
+        ------------------------------------------------->
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+	</head>
+
+	<body style="background-color:var(--primary-background-color)">
+
+        <!-----------------------------------------------
+        Header and Intro
+        ------------------------------------------------->
+        <div>
+            <nav id="sidebar" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+                <div id="progressBar d-none d-sm-block"></div>
+
+                <a class="navbar-brand d-none d-sm-block" href="#"><img src="images/oil.png" style="width:30px; margin-right:5px; margin-left:5px"></a>
+                <h3 id="navtext">Introduction | <span class='highlight2'> A Country Divided</span></h3>
+                <div id="socialbar" class="col-3 ml-auto align-self-end d-none d-sm-block">
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20MRP%20by%20Dexter%20McMillan.">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-custom animate slideIn" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Introduction</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="index.html#segment1">I. La Grève du Climat</a>
+                        <a class="dropdown-item" href="index.html#segment3">II. Lloydminster</a>
+                        <a class="dropdown-item" href="index.html#segment2">III. The Green New Deal</a>
+                        <a class="dropdown-item" href="index.html#segment5">IV. The Liberal Policy</a>
+                        <a class="dropdown-item" href="index.html#segment4">V. The Scandinavian Way</a>
+                        <a class="dropdown-item" href="index.html#segment6">VI. Moving Forward</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="notes.html">Reporter's Notes</a>
+                  </div>
+                </div>
+            </nav>
+
+            <div class="row align-items-center">
+                <div id="titlebox">
+                    <h1 id="title">DIVIDED</h1>
+                    <p id="subtitle">Navigating Canada's reliance on fossil fuels in a climate crisis.</p>
+                    <p id="byline">By Dexter McMillan</p>
+                </div>
+            </div>
+
+            <div id="essayDiv1" style="margin-bottom:20px">
+                <img id="essayPic1-1" class="essayPic" src="images/robsonglacier.jpg">
+                <!-- <div id="shader"></div> -->
+                <!-- <video autoplay loop muted id="essayPic1-1" class="essayPic banner-video">
+                    <source src="videos/strike.mp4" type="video/mp4">
+                </video>-->
+                <video autoplay loop muted id="essayPic1-2" class="essayPic banner-video">
+                    <source src="videos/plant.mp4" type="video/mp4">
+                </video>
+                <img id="essayPic1-3" class="essayPic" src="images/mrpshoot-202.jpg">
+                <video autoplay loop muted id="essayPic1-4" class="essayPic banner-video">
+                    <source src="videos/backgroundvid.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="essayCaptionBox1">
+                <div class="row captionRow align-items-center">
+                    <div id="caption1" class="col-md-4 essayCaption">
+                        <p>Our glaciers are receding. Our arctic ice is melting. Our cities are flooding.</p>
+                        <p>Canada is among the countries hit hardest by climate change. Our country is experiencing a warming of average temperatures double that of the rest of the world, according to a 2019 UN report on climate change.</p>
+                    </div>
+                </div>
+                <div class="row captionRow align-items-center">
+                    <div id="caption2" class="col-md-4 offset-md-9 essayCaption">
+                        <p>But we are not simply victims. We have the third largest crude oil reserves, and we export over $80 billion worth of crude oil per year, accounting for over 12 per cent of all our exported goods. Our greenhouse gas emissions exceed 720 megatons, making us one of the top ten emitters on the globe.
+                    </p>
+                    </div>
+                </div>
+                <div class="row captionRow align-items-center">
+                    <div id="caption3" class="col-md-4 essayCaption">
+                        <p>As the impacts of human industrial activities ravage our planet, calls for change collide with the realities of life in a resource-rich country: pipeline expansions, tanker traffic, protection of Indigenous sovereignty and hundreds of thousands of lives that depend on oil extraction.</p>
+                    </div>
+                </div>
+                <div class="row captionRow align-items-center">
+                    <div id="caption3" class="col-md-4 essayCaption">
+                        <p>The economic anxiety in oil boom towns in Alberta is pushing the Federal government to step in and support their industry. But activists are rising up and calling for divestment from fossil fuels as greenhouse gasses increase global temperatures and change our planet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------
+        Introduction
+        ------------------------------------------------->
+
+        <div class="segment container-fluid" style="padding-top:30px">
+            <div class="row text justify-content-center">
+                <div class="col-md-7">
+                    <p><span class="dropcap">P</span>oliticians across Canada are trying to appease the inhabitants of two separate worlds: those whose livelihoods depend on fossil fuels and those that believe we must transition away from oil and gas immediately. The Paris Agreement – a <a href="https://unfccc.int/files/essential_background/convention/application/pdf/english_paris_agreement.pdf" target="_blank">landmark commitment</a> from 187 countries to keep global temperatures from rising fewer than two degrees Celsius above pre-industrial levels – was signed by Canada in 2016, adding international pressure to take action to reduce emissions.</p>
+                    <p>In the United States, grassroots organizers are fighting for a Green New Deal, a social and climate justice plan championed by congressional representative Alexandria Ocasio-Cortez.</p>
+                    <p>Denmark’s largest pension funds have divested from fossil fuels and gone from one of the dirtiest energy systems in the world to one of the cleanest by burning their garbage and investing in wind farms. Sweden has enjoyed regular economic growth despite one of the heaviest carbon taxes in the world.</p>
+                    <p>But in Canada, oil prices flag and we continue to fight amongst ourselves. The Liberal Party was re-elected last year on a message of compromise. They bought the Trans Mountain Pipeline Expansion project in 2018 and claim it will be built, and that the money earned from selling oil abroad will go back into clean energy projects and a carbon tax will help to curb emissions in line with Paris targets.</p>
+                    <p>But politicians in Alberta are channeling anger from their constituents about the carbon tax and climate activists have vowed to stop the pipeline, claiming it will only worsen our contribution to climate change.</p>
+                    <p>Something, as they say, has got to give.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------
+        SECTION - Climate Strikes
+        ------------------------------------------------->
+        <img class="text-img" src="images/monument.jpg">
+        <div id="segment1" class="multimedia container-fluid">
+            <div class="caption" style="margin:0px; color:white">Protesters in Montréal climb over a monument near Mount Royal. <span class="gray">Dexter McMillan/September 27, 2019</span></div>
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle1" class="sectionhead"><span class="highlight">I.</span> La Grève du Climat<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p><span class="dropcap">T</span>he sprawling geography of Canada means getting oil from point A to point B is all the more challenging, and as a result, we’re no strangers to pipeline battles. Youth and Indigenous leaders have been at the forefront of each.</p>
+                    <p>Wet’suwet’en protesters clashed with police in Northern British Columbia in January 2019 after construction crews – backed by RCMP officers – moved through Wet’suwet’en territory without consent from Indigenous leadership. The crews were building TransCanada’s Liquid Natural Gas (LNG) pipeline.</p>
+                    <p>TransCanada’s Energy East pipeline – a proposal which would have run 1.1 million barrels of crude oil through a pipeline from Alberta to Canada’s east coast ports in New Brunswick – failed after reports that former Québec Premier Jean Charest provided consultation to the project despite being on the payroll of TransCanada.</p>
+                    <p>But the current fractures in Canada run along the fault line that is the Trans Mountain pipeline expansion. The pipeline was once owned and managed by Kinder Morgan, an oil company headquartered in Houston, Texas. But Trudeau purchased the project in 2018 from a hesitant Kinder Morgan for $4.5 billion to ensure it would be built.</p>
+                    <p>The project would twin the pipeline along most of its 1,150-kilometre route from near Edmonton, Alta., to Burnaby, B.C., increasing capacity from 300,000 barrels per day to almost 900,000. This almost triples the capacity, meaning crude oil can be shipped from Alberta to coastal Canadian ports, where it can be sold and shipped to foreign markets at a higher volume.</p>
+                    <p>The National Energy Board (NEB), a national watchdog that reviews energy infrastructure projects, ruled in February 2019 in favour of the Trans Mountain pipeline expansion, clearing the way for the government to proceed with construction. The Trans Mountain Expansion website states that the project is expected to employ 15,000 people for construction alone, and “the equivalent of 37,000 direct, indirect and induced jobs per year during operations.”</p>
+                    <p>But opposition to the Trans Mountain expansion is strong. These tensions spring-loaded into the Montréal climate march on September 27, 2019, resulting in the largest climate demonstration against the pipeline yet.</p>
+                </div>
+            </div>
+        </div>
+        <div id="essayDiv4">
+            <video autoplay loop muted id="essayPic4-1" class="essayPic banner-video">
+                <source src="videos/MARCHERS.mp4" type="video/mp4">
+            </video>
+            <img id="essayPic4-2" class="essayPic" src="images/climatemarchmtl-021.jpg">
+            <img id="essayPic4-3" class="essayPic" src="images/climatemarchmtl-1359.jpg">
+            <img id="essayPic4-4" class="essayPic" src="images/xr.jpg">
+            <img id="essayPic4-5" class="essayPic" src="images/crowd.jpg">
+        </div>
+
+        <div id="essayCaptionBox4">
+            <div class="row align-items-center captionRow">
+                <div id="caption4-1" class="col-md-5 col-sm-10 offset-md-8 essayCaption">
+                    <p>Many youth at the Montréal march say they have lost faith in the ability of politicians to take action. They say it’s hypocritical for Trudeau to be building a pipeline while claiming to be a “climate leader.”</p>
+                    <p>“I’m not here to deliver a message of hope, but a message of urgency,” said Elijah Concepcion. He’s barely keeping himself from yelling, instead carefully choosing his words and hitting each of them with an emotional punch.</p>
+                    <p>“We’ve wasted decades – years and years – fucking up our planet while our leaders are greenwashing their speeches,” he said. “I’m tired.”</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption4-2" class="col-md-5 col-sm-10 essayCaption">
+                    <p>Students at Université du Québec à Montréal – known to Montréalers as UQAM – are preparing for the second week of global climate strikes, culminating in the march. Flyers posted on bulletin boards and concrete columns through the university and similar posters seen through the city serve as a rallying cry for students to participate in what would be the largest climate demonstration in Canada.</p>
+                    <p>The French-language university UQAM — along with the majority of other schools in Montréal — cancelled classes so students could attend the strike.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption4-3" class="col-md-6 col-sm-10 essayCaption">
+                    <p>Youth across the globe have been galvanized into action by Indigenous activists like Autumn Peltier here in Canada and international sensation Greta Thunberg. Both lead the march in Montréal.</p>
+                    <p>It's estimated that more than half a million people attended Montréal’s march in one of Canada's most populous cities. It was a perfect storm of tireless advocacy and climate organizing (and the Greta effect).</p>
+                    <p>"Bienvenue à Montréal," reads a sign of Greta Thunberg in the halls of UQAM. "Avec toi, Greta, pour la grève du climat."</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption4-4" class="col-md-5 col-sm-10 offset-md-8 essayCaption">
+                    <p>One group, Extinction Rebellion, has emerged worldwide as a recognizable name in climate activism. They have chapters in major cities across Canada and have staged political protests in each.</p>
+                    <p>They have three demands.</p>
+                    <p>“Government must tell the truth by declaring a climate and ecological emergency,” reads the first demand on their website.</p>
+                    <p>“Act now,” reads the second.</p>
+                    <p>The third strikes right at the heart of the difficulty of the task the organization says lies before them: “Government must create and be led by the decisions of a Citizens’ Assembly on climate and ecological justice.”</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption4-5" class="col-md-4 col-sm-10 essayCaption">
+                    <p>Demonstrations similar to the Montréal strike have been sprouting up all across Canada last year. This rally, held just adjacent to downtown Vancouver, had guest speakers, an “anti-Trudeau choir", and an art installation featuring a pipeline tied in knots.</p>
+                </div>
+            </div>
+        </div>
+        <!-----------------------------------------------
+        SECTION - Lloydminster
+        ------------------------------------------------->
+        <div id="segment3" class="segment container-fluid">
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle3" class="sectionhead"><span class="highlight">II.</span> Lloydminster<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p><span class="dropcap">T</span>he Heavy Oil Science Centre is a long way away from Montréal, both physically and metaphorically. It’s a 3,300 kilometre drive through the Canadian Shield and snowy Manitoba’s dry cold before reaching the dusty prairie city of Lloydminster on the border between Alberta and Saskatchewan.</p>
+                    <p>Few places represent the distance between anti-oil protesters and the reality of Canada’s energy dependence better than this place. It sits on the Saskatchewan side of Highway 17, a road that runs through the middle of town and serves as the provincial border (there is a quiet agreement to keep the Alberta clock, regardless of which side of the road you’re on, making GPS-based cell phone clocks a constant frustration for visitors).</p>
+                    <div class="img-box-vertical-right" style="width:250px">
+                        <img class="text-img" src="images/crudey.jpg" style="box-shadow: none; width:100%">
+                        <div class="caption">Crudey the oil drop — called Squirt in the centre itself — helps users navigate <a class=captionlink href="http://www.lloydminsterheavyoil.com/" target="_blank">the website for the Heavy Oil Science Centre</a>. [Used with permission from the Heavy Oil Science Centre website.]</div>
+                    </div>
+                    <p>For residents, the colourful exhibits are a point of pride. For out-of-towners living in Canada’s major urban centres, there is no better place to learn about the city’s history processing heavy oil. It’s also a popular field trip among the schoolchildren of Lloydminster, for which it’s easy to see the exhibit’s appeal. The roughly circular room of exhibits and activities follows Squirt, an anthropomorphic drop of oil grinning behind sunglasses, as it introduces games and explains the history and science of heavy oil in the region.</p>
+                    <p>Heavy oil is a critical cornerstone of Lloydminster’s economy. In the city – simply called “Lloyd” by locals – fortunes live and die with the boom and bust of the oil economy, like many prairie towns that are intimately connected to the fossil fuel industry. It is a case study of Canada’s reliance on fossil fuels, and residents of the town have summoned angry politicians to push for a pipeline they believe is critical to restoring Lloydminster — and Alberta — to its former glory.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/juba.jpg">
+                    <div class="caption">Vic Juba stands in the Heavy Oil Science Centre, which he helped to produce. <span class="gray">Dexter McMillan/May 17, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <h2>Heavy Oil in Our Veins</h2>
+                    <p>Vic Juba, known around town as “Mr. Lloydminster,” is a big-time oil man in this big-time oil town and his industry resumé is thicker than Lloydminster crude. Juba spent his entire career at Husky. His reputation has earned him over half a dozen awards for public service and a monument in the southwest of the city: the Vic Juba Community Theatre.</p>
+                    <p>Tourism documents list Lloydminster as the “Heavy Oil Capital of the World." It sits just south of the Cold Lake oil sands and boasts its own heavy oil deposits. But refining heavy oil into more useful products is how Lloydminster truly made its name.</p>
+                    <p>Heavy oil is not the same as other kinds of petroleum. It’s difficult to pull out of the ground, for starters, and needs to be heavily refined before being useful.</p>
+                    <p>Because it is relatively more costly to extract and process heavy oil, the world’s interest has been primarily on conventional oil reserves with a lower viscosity. But interest in heavy oil is peaking as conventional oil reserves in the Middle East and elsewhere dwindle.</p>
+                    <p>“I was the first manager of the upgrader here,” says Darrell Howell, a resident of Lloydminster for nearly three decades. “Basically, heavy oil has too much carbon, and not enough hydrogen.”</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/upgrader.png">
+                    <div class="caption">The process that Howell made his living understanding: converting heavy oil into more useful products. <span class="gray">Darrell Howell/May 17, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>Howell’s explanation reflects his specialization as an engineer. He explains that Husky’s refinery, built in 1946, essentially unlocked the heavy oil reserves in the surrounding area for use by introducing hydrogen into the oil and turning it into a more useful product. Lloydminster refines heavy oil from all over Alberta and turns it into construction products like asphalt.</p>
+                    <p>“The asphalt quality is basically the best in the world,” boasts Juba.</p>
+                    <p>Juba began his career at Husky in 1953 as a technician in the lab. He says at the time, Husky and other oil companies in Canada were struggling to unlock the potential in heavy crude. Getting it to flow through pipelines was the hardest part.</p>
+                    <p>“It was quite an experience to try and determine how much dilatant we have to put in to make it as viscous as possible so it will flow,” said Juba, “not make it 100 miles and then stop dead because of too much friction."</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/lloydminster.jpg">
+                    <div class="caption">The Husky upgrader in Lloydminster is hard to miss. It's just off the highway that brings you through town. <span class="gray">Dexter McMillan/May 17, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>The Husky Oil Upgrader, built in 1992 to further process the heavy crude found in the Lloydminster area before shipping to other parts of North America, is a major employer in Lloydminster, providing 800 jobs. The upgrader takes heavy crude oil from the surrounding area and processes 29,000 barrels a day into asphalt and other oil products.</p>
+                    <p>In 1988, Juba moved from a technical role to be Husky’s community liaison, a role of particular importance given the intimate role Husky has in the community. The company leases approximately 2 million acres of land in the Lloydminster area, making them the largest operator in the area. It makes regular contributions to community spaces like parks and recreational facilities in Lloydminster.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/baseballfield.jpg">
+                    <div class="caption">Husky donates money to build community spaces like this baseball field. <span class="gray">Dexter McMillan/May 17, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>Husky’s scope 1 emissions (scope 1 emissions are from activities that are directly under the control of the company) are listed as 10.2 million metric tons of CO<sub>2</sub> equivalent (CO<sub>2</sub> equivalent is a measurement that standardizes emissions of all greenhouse gases – methane and chlorofluorocarbons for instance – as CO<sub>2</sub> for comparison). The Lloydminster upgrader is responsible for 10.6 per cent of those emissions. It is the third most heavy producer of GHGs of all Husky facilities. </p>
+                    <p>Lloydminster is a city of just over 31,000, but it is difficult to stop the word “town” from running off the tip of your tongue when you describe it. The oil industry workers seem tightly connected. There’s a sense of community in every corner, from the Husky-sponsored baseball diamond to the community centre <em>slash</em> Heavy Oil Science Centre <em>slash</em> parking lot farmer’s market.</p>
+                    <p>Lloydminster, like other towns and cities in Alberta that sprang up to support oil workers in the 20<sup>th</sup> century, has an up-and-down economic history.</p>
+                    <p>Corine Price grew up close to Lloydminster before moving away to attend university. She came back to Lloydminster as the town’s archivist in the early 1990s. In the archive room – another of the many civic institutions that co-exist in the same building as the Heavy Oil Science Centre – she sits surrounded by boxes, papers and books, sipping tea with another resident who volunteers with her.</p>
+                    <p>“It seemed to me like the city was always growing,” says Price about Lloydminster in the early 2000s. “I remember as a kid, Lloyd wasn’t a city but more like a big town. Now it seems like more of a fast-moving, urban centre."</p>
+                    <p>She said that in 2015, it all started to change.</p>
+                    <p>“That’s when people stopped spending money so frivolously on toys,” she says. “There were a lot of layoffs in the oil field. We started seeing a lot of housing foreclosures and businesses closing."</p>
+                    <p>“We were finding mental health issues were very prevalent,” said Juba about the city’s tougher times. “I remember this one lady I talked to. She said that the best she could do was an appointment in six month’s time. I said, ‘I got a problem today, not six months from now.’”</p>
+                    <p>Alberta’s unemployment rate has always fluctuated in line with the price of oil. In December 2018, Alberta’s unemployment was 6.4 per cent. A year later, it was 7 per cent. Unemployment peaked in Alberta last decade at a stunning 9.1 per cent in November 2016. Unemployment in Canada was seven per cent at the same time.</p>
+                    <p>“It seems like the only thing I remember is having drought,” said Price of her childhood. “That's kind of my early, early memories of the economy.”</p>
+                    <div class="img-box-vertical-right col-md-5">
+                        <img class="text-img" src="images/ad1.jpg" style="box-shadow: 0.5px 2px 5px .5px black;">
+                        <div class="caption">An energy advertisement in an issue of Canadian Geographic. [Image courtesy of Canadian Geographic]</div>
+                    </div>
+                    <p>Unemployment spiked to record levels in Alberta during the 1980s, when the price of oil crashed and at one point, left 12.8 per cent of Albertans out of work and looking for jobs.
+                    </p>
+                    <p>Today, on the outskirts of Lloydminster brand new developments languish, half-finished in the dusty prairie grass. Many of the newer parts of the city began construction in 2013 at a time when oil had recovered from the 2008 recession and climbed to over $100 USD/barrel, fuelling development and creating jobs in the city. But by January 2015, the price of oil had plummeted almost to $52 USD/barrel, stalling out the economy.</p>
+                    <p>But during lean times like this, Price says austerity becomes as intimately connected to the city as heavy oil.</p>
+                    <p>“You feel it everywhere."</p>
+                    <p>Without question, Husky is having trouble in Alberta. The price of Lloydminster crude is still just under $60 USD/barrel. Husky’s report cites “continued transportation constraints” as the cause of declining prices for Lloydminster crude.
+                    </p>
+                    <p>Shortly after the 2019 federal election, Husky laid off almost 400 workers in their Calgary office, citing Alberta’s oil curtailment policies as the reason. Oil curtailment is the process of limiting production – in this case, 10 per cent in order to increase the price of Alberta’s crude oil. The practice would be unnecessary if prices were buoyed by shipping their oil to a global market.
+                    </p>
+                    <p>In plain language: they need a pipeline.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/aalbers2.jpg">
+                    <div class="caption">Gerald Aalbers has been the mayor of Lloydminster since 2016. <span class="gray">Dexter McMillan/May 16, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <h2>Hard Times in Lloyd</h2>
+                    <p>Mayor Gerald Aalbers sits behind a frosted glass door in Lloydminster’s city hall building, tucked just into the Alberta side of the provincial border. He sits in a corner of his office next to a shelf of trinkets: A golden oil derrick that bobs up and down to music when you hit a button, a Sir John A. MacDonald bobblehead and a souvenir baseball.</p>
+                    <p>He is a jovial man with the beaming smile of a politician. He’s crystal clear about why he ran for mayor of Lloydminster in 2016: “I was angry."</p>
+                    <p>Like many conversations in Lloydminster, the spectre of the 1980s forces itself into our conversation. In this particular discussion, Aalbers is describing how a Husky refinery expansion project saved Lloydminster from that decade’s recession.</p>
+                    <p>“The new technology increased [production] by four fold,” he says with some measure of pride. “The people that were on unemployment now have worked 365 days of the year,” he said. “Our unemployment rate dropped dramatically.”</p>
+                    </div>
+                    <div class="col-md-9 img-box-horizontal">
+                        <img class="text-img" src="images/derrick.jpg">
+                        <div class="caption">Several trinkets sit on a shelf in the corner of Mayor Gerald Aalbers's office. <span class="gray">Dexter McMillan/May 16, 2019</span></div>
+                    </div>
+                    <div class="col-md-7">
+                        <p><a href="https://www.atb.com/siteassets/legacy/Alberta-Economic-Outlook-August-2017.pdf" target="_blank">A 2017 report</a> on the state of the Alberta economy paints a bleak picture of cities like Lloydminster.
+                        </p>
+                        <p>“The recession has left deep scars, particularly in the energy sector and across the labour market,” reads the report. “These will be slow to heal.”</p>
+                        <p>Aalbers describes the need for a pipeline project like the Trans Mountain expansion.</p>
+                        <p>“A pipeline is the safest methodology we have today to move oil,” says Aalbers. “When you look at a railroad, and you see those tanker cars going down, if that was a continuous pipe in the ground, going 24 hours a day, seven days a week, 365 days a year, you would move astronomical amounts of volume, and not bother anyone on the surface.”</p>
+                        <p>“Right now there's no guarantee [for oil companies] that they'll make return because they can't sell their product. And if you can't sell your product…we've really created a roadblock in the system.”</p>
+                        <div class="img-box-vertical-left col-md-5">
+                            <img class="text-img" src="images/ad2.jpg" style="box-shadow: 0.5px 2px 5px .5px black;">
+                            <div class="caption">An oil advertisement in an issue of Canadian Geographic. [Image courtesy of Canadian Geographic]</div>
+                        </div>
+                        <p>I met Aalbers shortly after Alberta’s provincial election. The United Conservative Party's Jason Kenney swept the NDP out of Alberta legislature in April 2019 on fighting words about bringing back jobs in oil and gas.</p>
+                        <p>Oil and gas lifers like Howell says the “ridiculous situation around pipelines” currently ongoing in Canada is one of messaging.</p>
+                        <p>“I think we really have lost the public relations war at this point,” said Howell.</p>
+                        <p>Almost immediately, Kenney announced an investment of $30 million into an "energy war room” to win the PR war Howell claims the industry has already lost. The Canadian Energy Centre, as it’s called, is staffed by policy analysts and journalists writing stories to “help raise understanding of the Canadian energy sector’s value to this country and the world, through the sharing of knowledge, facts and ideas.” </p>
+                        <p>(Already, the initiative has <a href="https://www.cbc.ca/news/canada/edmonton/energy-war-room-blunders-hurting-alberta-s-resource-industry-ndp-says-1.5416862" target="_blank">come under fire</a> for improper journalistic practice and copyright infringement.)</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/sciencecentre.jpg">
+                    <div class="caption">The Heavy Oil Science Centre is a place dedicated to teaching residents and tourists to Lloydminster about the history of crude oil in the region. <span class="gray">Dexter McMillan/May 17, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>Lloydminster is like many other towns and cities across Alberta. Corporations like Husky solved energy problems of the 20<sup>th</sup> century for Canadians and people around the world and Canadians have benefitted from these solutions. But the world is moving on from fossil fuels, and many of the people there can’t help but feel left behind with it.</p>
+                    <p>“We're in a tough spot and we need help from the federal government,” says Howell, “Albertans feel like they've turned their backs on us.”</p>
+                    <p>But Squirt wants visitors to the Heavy Oil Science Centre to understand the importance of the fossil fuel industry to Albertans and Canadians alike.</p>
+                    <p>“People used to call me a problem. A disappointment. They even called me crude,” reads a sign introducing the drop of oil, who looks like he thinks he could be cooler than you. “But now with all the people helping me, and the Upgrader where I can go to learn to be ‘refined,’ my friends say I’m very important.”</p>
+                </div>
+
+                <script>
+                  new Vivus('Layer_3', {duration: 200});
+                </script>
+            </div>
+        </div>
+        <!-----------------------------------------------
+        SECTION - The Green New Deal
+        ------------------------------------------------->
+
+        <div id="segment2" class="multimedia container-fluid">
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle2" class="sectionhead"><span class="highlight">III.</span> The Green New Deal<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p><span class="dropcap">O</span>ne way that countries around the world are proposing to shift away from dependence on fossil fuels is through what’s called a Green New Deal. The movement began in the United States, but has since spread to countries like Germany, Korea and Canada. Advocates are calling for a transition to a “green economy” – one where fossil fuels are no longer used.</p>
+                    <p>The movement began in the United States and is championed by Congressperson Alexandria Ocasio-Cortez. Modelled after Franklin Delano Roosevelt’s original New Deal, she has tabled a resolution in Congress that calls for extensive reforms to put oil and gas workers back to work in renewable energy sectors as a way to bridge the gap between our faltering present and our questionable future.</p>
+                    <p>Environmental groups in Canada see the potential in her idea and have called on the government to adopt a similar Green New Deal as the best way to mend a fractured country on a broken planet.</p>
+                    <p>Dylan Penner, a campaigner who is part of the planning of Canada’s Green New Deal, says we “don't have a moment to lose” in implementing a Green New Deal here in Canada.</p>
+                    <div class="col-md-12">
+                        <iframe width="100%" height="300px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/753266923%3Fsecret_token%3Ds-Si1je&color=%23990000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <div class="caption" style="color:white">Still confused? Listen to an explainer podcast to learn what the Green New Deal is, what it's calling for, and where the Canadian movement is at today.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="essayDiv2">
+            <video autoplay loop muted id="essayPic2-1" class="essayPic banner-video">
+                    <source src="videos/VOLUNTEER.mp4" type="video/mp4">
+                </video>
+                <video autoplay loop muted id="essayPic2-2" class="essayPic banner-video">
+                    <source src="videos/VARSHINI.mp4" type="video/mp4">
+                </video>
+            <img id="essayPic2-3" class="essayPic" src="images/aoc2.jpg">
+            <img id="essayPic2-4" class="essayPic" src="images/bernie.jpg">
+            <img id="essayPic2-5" class="essayPic" src="images/cgnd.jpg">
+        </div>
+
+        <div id="essayCaptionBox2">
+            <div class="row align-items-center captionRow">
+                <div id="caption2-1" class="col-md-4 col-sm-10 essayCaption">
+                    <p>Outside Howard University's Cramton Auditorium, attendees and organizers begin gathering for the chance to see the evening's act.</p>
+                    <p>The tour drew thousands of Americans to stops all across the country. The Sunrise Movement and other climate activists brought guest speakers to each spot.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption2-2" class="col-md-4 col-sm-10 offset-md-8 essayCaption">
+                    <p>There were rumours circulating beforehand that Alexandria Ocasio-Cortez — the Democratic Congressional Representative for the 14th District of New York — would be taking the stage.</p>
+                    <p>But first, Varshini Prakesh, a leader in the Sunrise Movement, took the stage to hype up the crowd. Prakesh has been organizing Green New Deal rallies all over the United States, and has emerged as a key leader alongside Ocasio-Cortez.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption2-3" class="col-md-4 col-sm-10 essayCaption">
+                    <p>Ocasio-Cortez took the stage at the end of the evening with a fiery speech aiming to drum up support for a Green New Deal. In an era of deep uncertainty about the longevity of our planet thanks to a changing climate, she has become the frontperson for the Green New Deal in the United States.</p>
+                    <p>Ocasio-Cortez paces back and forth with the mic, asking the crowd rhetorical questions about the kinds of future they want to live in.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption2-4" class="col-md-4 col-sm-10 essayCaption">
+                    <p>Senator Ed Markey and presidential candidate Bernie Sanders were also in attendance to support the movement and the resolution, tabled in the US Congress in 2018.</p>
+                    <p>Bernie Sanders has said if elected, he will push for a Green New Deal as president.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption2-5" class="col-md-5 col-sm-10 essayCaption">
+                    <p>Environmental groups in Canada have seen the potential in the Green New Deal and have called on the government to adopt a similar plan as an alternative to the Trans Mountain pipeline expansion project to create jobs and transition to renewables.</p>
+                    <p>The Pact for a Green New Deal held town halls like this one across Canada to hear what people wanted to see in a Green New Deal.</p>
+                    <p>“The world is finally waking up,” says Penner. “We're working to ensure 2020 is going to be the year of the Green New Deal.”</p>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------
+        SECTION - The Liberal Policy
+        ------------------------------------------------->
+
+        <div id="segment5" class="segment container-fluid">
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle5" class="sectionhead"><span class="highlight">IV.</span> The Liberal Policy<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p><span class="dropcap">C</span>atherine McKenna pushes her way through supporters in a packed bar in the Ontario riding of Ottawa-Centre, hands raised awaiting a crisp high five from their newly re-elected member of parliament. The room is full of people in red Liberal Party of Canada shirts and reporters ready to hear McKenna’s victory speech. Previously, McKenna served as Minister of the Environment and Climate change in Prime Minister Justin Trudeau's majority Liberal government prior to the election. Her re-election signals confidence from her constituents in her policies.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/mckenna.jpg">
+                    <div class="caption">Catherine McKenna makes a speech at her victory party in Ottawa. <span class="gray">Dexter McMillan/October 21, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>“I see so many young people,” she began, “marching in the streets and demanding climate action. That is amazing.”</p>
+                    <p>“Please know that your work to protect the environment pushes me and pushes our party every single day,” she added. “Tomorrow it's time to get back to the people's work. making good on the promises we made…and let me tell you, that includes ambitious and practical action on climate change.”</p>
+                    <p>It is a message that has been ridiculed by activists in Canada as typical of the Trudeau government’s compromise between those among record-breaking crowds in Montréal protesting his purchase of an oil pipeline and those in cities like Lloydminster anxious about vanishing jobs. The project is a stitch that runs along the border of an increasingly anxious, oil-dependent province. At the same time, Trudeau is implementing a mandatory carbon tax to be applied by provinces across Canada to appease those who say it is the best way to combat rising global temperatures. But because of the pipeline, protesters aren’t buying the environmentally friendly image that then-Ministry of the Environment McKenna put on, and the carbon tax has a wave of newly elected conservative premiers fuming. Reconciling the growing divide may prove to be more difficult than a simple compromise.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5" style="margin:10px;">
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">THEY. ARE. PROTESTING. YOU. AND. YOUR GOVERNMENT&#39;S. INACTION. <br><br>Say it with me one more time:<br>YOU! BOUGHT! A! PIPELINE! <a href="https://t.co/tc5bQoTdlX">https://t.co/tc5bQoTdlX</a></p>&mdash; Nayeli Jimenez (@nayelijs) <a href="https://twitter.com/nayelijs/status/1185280787341434881?ref_src=twsrc%5Etfw" target="_blank">October 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <h2>The Gambit</h2>
+                    <p>“Our government’s position is clear: It must be built and it will be built."</p>
+                    <p>Finance Minister Bill Morneau told reporters that his government is committed to building the Trans Mountain Pipeline Expansion shortly after Trudeau purchased the project for $4.5 billion.</p>
+                    <p>Unfortunately for Trudeau’s Liberals, the commitment to the Trans Mountain expansion seems to have galvanized climate protesters and has done nothing to assure Albertans that it would ever actually be built.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/trudeau.jpg">
+                    <div class="caption">Prime Minister Justin Trudeau marches with his family in the Montréal climate strike shortly before the Canadian Federal election. Surrounding him, marchers protest the pipeline he nationalized. <span class="gray">Dexter McMillan/September 27, 2019</span></div>
+                </div>
+                <div class="col-md-7">
+                    <p>In addition to the government’s nationalization of the Trans Mountain expansion, Trudeau has mandated that each province implement a minimum carbon tax.</p>
+                    <p>A carbon tax is a sum of money charged to organizations on carbon emissions. The tax begins at $10 per tonne of emissions and will increase annually to a maximum of $50 per tonne by 2022, according to <a href="https://www.liberal.ca/pricing-carbon-pollution/" target="_blank">the Liberal Party’s website</a>.
+                    </p>
+                    <p><a href="https://www.imf.org/external/pubs/ft/fandd/2019/12/the-case-for-carbon-taxation-and-putting-a-price-on-pollution-parry.htm" target="_blank">Reports</a> indicate, however, that Canada would need at least a $70 per tonne tax to meet their Paris targets.
+                    </p>
+                    <p>To complicate matters for the federal government, provincial politics has taken a decidedly blue tinge in the past two years. Saskatchewan, Manitoba, Alberta and Ontario all elected conservative politicians, many running on a populist, anti-carbon tax message.</p>
+                    <p>All of these premiers say that the tax will make life more expensive for Canadian consumers. Saskatchewan Premier Scott Moe is taking Trudeau’s carbon tax to court. In an <a href="https://business.financialpost.com/opinion/scott-moe-why-saskatchewan-is-fighting-trudeaus-carbon-tax-in-court-this-week" target="_blank">op-ed in the Financial Post</a>, Moe argues that the carbon tax is unconstitutional and will not “significantly reduce emissions.”
+                    </p>
+                    <p>Ontario premier Doug Ford has already taken the carbon tax to court and lost. In June 2019, the Ontario Court of Appeals ruled that the carbon tax imposed on provincial governments was constitutional.</p>
+                    <p>“The need for a collective approach to a matter of national concern…permits Canada to adopt minimum national standards to reduce GHG emissions,” read the decision from Chief Justice of Ontario George Strathy.</p>
+                    <p>A carbon tax is one of the best measures we have to combat climate change. British Columbia has had a carbon tax since 2008, and was increased in April 2019 to $40 per tonne of CO<sub>2</sub> equivalent, and is providing rebates of $150 per adult to offset the increasing cost to consumers.</p>
+                    <p>Trudeau for his part has committed to providing rebates to offset these costs. But in places like Lloydminster, there is considerable anxiety about the tax.</p>
+                    <p>“The carbon tax feels very much like a penalty,” said Jim Spenrath, a Lloydminster resident I met with alongside a handful of others at a restaurant in Lloydminster. He’s worked in the industry for more than four decades.</p>
+                    <p>“I would be more okay with the carbon tax if I could see the federal budget papers, and they've got a detailed plan where they're spending it on science,” he added. “It’s a tax grab at this point because they’re not redirecting that money anywhere.”</p>
+                    <p>Spenrath’s point gets vigorous head-nods from around the table. But a <a href="https://www.pembina.org/reports/pricing-carbon-pollution-in-alberta-mar2019-final.pdf" target="_blank">report</a> from the Pembina Institute suggests that the money generated from Alberta’s carbon tax is not simply a tax grab. More than half of the $2.5 billion collected has been reinvested into the economy and in 2018, it only cost Albertans about $5 more per month and 60 per cent of them received a full rebate.
+                    </p>
+                    <p>As for the pipeline? Spenrath isn’t happy about that either.</p>
+                    <p>“He’s not pro-pipeline,” added Spenrath. “Not a bit.”</p>
+                    <p>Another Lloydminster resident, Richard Clinger, scoffs when asked about Trudeau’s purchase of the pipeline. “I think he bought it so he could sit on it.”</p>
+                </div>
+            </div>
+        </div>
+        <!-----------------------------------------------
+        SECTION - Scandinavia
+        ------------------------------------------------->
+        <div id="segment4" class="multimedia container-fluid">
+            <div class="row justify-content-center">
+                <div class="titlerow col-md-9">
+                    <h1 id="subtitle4" class="sectionhead"><span class="highlight">V.</span> The Scandinavian Way<br>
+                    </h1>
+                </div>
+                <div class="col-md-7">
+                    <p><span class="dropcap">C</span>anada signals they want to ramp up export of petroleum around the world at the same time as other countries are moving on from burning fossil fuels for energy. Scandinavia has taken innovative approaches to both energy generation and planning for a future without hydrocarbons.</p>
+                    <p>Sweden has some of the highest carbon taxes in the world, currently at CAD$162 per tonne of CO<sub>2</sub> equivalent. Taxes have been levied on motor fuels since the 1930s, but the current carbon tax was introduced in 1991 and set at CAD$33 per tonne. Over time, it’s been gradually increased to give corporate emitters and individuals time to adjust. It has also come alongside a decrease in income taxes, effectively shifting priorities without hitting consumers too hard.
+                    </p>
+                    <p>Despite Ontario premier Doug Ford’s claim last year that a carbon tax would trigger a recession, the Swedish tax has not stalled out the country’s economy. Between implementation in 1991 and 2017, the economy has grown by 78 per cent.</p>
+                    <p>The Norwegian government has been exporting oil since their discovery of oil in the North Sea in 1969, ensuring it is a boom that will never bust. The federal bank of Norway set up Oljefondets – Norwegian for “The Oil Fund” – that has generated <a href="https://www.nbim.no/" target="_blanks">4.9 billion Norwegian kroner</a> (or CAD$719 million) through investments around the world since 1998.</p>
+                    <p>“The aim of the oil fund is to ensure responsible and long-term management of revenue from Norway’s oil and gas resources in the North Sea so that this wealth benefits both current and future generations,” reads the fund’s website.</p>
+                    <p>Copenhagen, Denmark has been burning their garbage as a source of energy for almost five decades. It wasn’t always clean, but a brand-new plant opened in 2017 that converts every tonne of garbage into 2700 kWh of heating for 150,000 homes in the surrounding area and a small amount of energy, enough to power a lightbulb for eight hours.</p>
+                </div>
+            </div>
+        </div>
+        <div id="essayDiv3">
+            <video autoplay loop muted id="essayPic3-1" class="essayPic banner-video">
+                <source src="videos/CLAW_LOW.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted id="essayPic3-2" class="essayPic banner-video">
+                <source src="videos/burn_low.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted id="essayPic3-3" class="essayPic banner-video">
+                <source src="videos/SMOKE.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted id="essayPic3-4" class="essayPic banner-video">
+                <source src="videos/COPENHILL.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="essayCaptionBox3">
+            <div class="row align-items-center captionRow">
+                <div id="caption3-1" class="col-md-4 offset-md-8 essayCaption">
+                    <p>Amager Bakke receives 250-300 truckloads of trash every day, half from businesses in the surrounding area and half from Copenhagen homes. In this room, an operator will sit and monitor several mechanized claws that move the fuel to an incinerator. The claws are fully automated.</p>
+                    <p>“This facility is a bit too big compared to how much we need in the Copenhagen area,” said Sune Scheibye, media consultant for the power plant. “During the wintertime, we import waste.”</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption3-2" class="col-md-4 offset-md-8 essayCaption">
+                    <p>The garbage is burned at around 1000 degrees Celsius. The heat is used to heat pipes of water to create steam, which generates electricity. CO<sub>2</sub> that would be emitted by the combustion is run through a “scrubbing system” that removes greenhouse gasses and generates more heat for power generation, reducing emissions by over 85 per cent.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption3-3" class="col-md-4 essayCaption">
+                    <p>The end result is water vapor emitted through Amager Bakke’s massive smokestack. The “smoke” emits 85 per cent fewer GHGs than smoke that has not been filtered.</p>
+                </div>
+            </div>
+            <div class="row align-items-center captionRow">
+                <div id="caption3-4" class="col-md-4 offset-md-8 essayCaption">
+                    <p>The generator doubles as a year-round ski hill. Designed by Bjarke Ingels Group, a Danish architecture firm, the surface is made from a slick plastic that can be skied down. A climbing wall will be opening this spring on the face of the building.</p>
+                    <p>The idea is to make CopenHill “a landmark of the Danish capital,” according to project manager Lars Juel Rasmussen.</p>
+                </div>
+            </div>
+        </div>
+            <!-----------------------------------------------
+            SECTION - Kicker
+            ------------------------------------------------->
+
+            <div class="grid">
+                    <section class="image-row">
+                        <img src="images/ottawa/two.jpg" />
+                        <img src="images/ottawa/three.jpg" />
+                        <img src="images/ottawa/eleven.jpg" />
+                        <img src="images/ottawa/four.jpg" />
+                     </section>
+
+                    <section class="image-row">
+                        <img src="images/ottawa/five.jpg" />
+                        <img src="images/ottawa/six.jpg" />
+                        <img src="images/ottawa/seven.jpg" />
+                        <img src="images/ottawa/eight.jpg" />
+                     </section>
+
+                    <section class="image-row">
+                        <img src="images/ottawa/nine.jpg" />
+                        <img src="images/ottawa/ten.jpg" />
+                        <img src="images/ottawa/one.jpg" />
+                        <img src="images/ottawa/fourteen.jpg" />
+                    </section>
+
+                    <section class="image-row">
+                        <img src="images/ottawa/twelve.jpg" />
+                        <img src="images/ottawa/thirteen.jpg" />
+                        <img src="images/ottawa/fifteen.jpg" />
+                        <img src="images/ottawa/sixteen.jpg" />
+                    </section>
+                    <div class="caption">Protesters, many affiliated with Extinction Rebellion, shut down the Laurier bridge in Ottawa to call for politicians to take action on climate change. <span class="gray">Dexter McMillan/October 18, 2019</span></div>
+                </div>
+
+            <div style="background-image: url(images/toys.jpg)"></div>
+            <div id="segment6" class="segment container-fluid">
+                <div class="row justify-content-center">
+                    <div class="titlerow col-md-9">
+                        <h1 id="subtitle6" class="sectionhead"><span class="highlight">VI.</span> Moving Forward<br>
+                        </h1>
+                    </div>
+                    <div class="col-md-7">
+                        <p><span class="dropcap">T</span>he 16-hour drive might as well be a portal from one world to another. After Calgary, mountains surge upwards from land as far as you can see in all directions. Land bridges over the highway allow for passage of wildlife from one side of the Trans-Canada Highway to another, and it’s easy to picture caribou gracefully meandering over the traffic screaming below as the creatures navigate the activity of motorized chaos of our world.</p>
+                        <p>"This this whole thing with the oil industry has been a very divisive thing in Canada,” Spenrath told me. I thought about what he said the entire drive.</p>
+                        <p>The energy in Vancouver would likely feel entirely foreign to Howell, Juba and Spenrath. Shortly after arriving, I attended an anti-pipeline rally in False Creek, a dense, affluent waterfront neighbourhood adjacent to the downtown core.</p>
+                        <p>Protesters chanted and shook their signs towards a stage, the cool blue and white of the snow-capped North Shore mountain range towering behind stacks of condos. Councillor Christine Boyle spoke over a crowd of hundreds hoisting anti-Trudeau signs or, in one case, an elaborate art installation that depicted a pipeline tied in knots.</p>
+                        <p>“It’s disheartening to be doing everything that we can to meet the IPCC targets,” she told the crowd, “while the federal government undoes our efforts by encouraging the expansion and export of fossil fuels.”</p>
+                        <p>The crowd groaned and swelled in support. More signs shook and heaved as agitation rippled through the inhabitants of the world underneath.</p>
+                        <p>“We have the energy you can use in eastern Canada, you can use it in British Columbia,” Aalbers told me just weeks earlier on my visit to the other world. “All we're asking for is the ability to move that product to market in a safe and effective manner.”</p>
+                        <p>I checked in with Vic Juba via email many months after my trip to Lloydminster, just a few days after Justin Trudeau’s re-election. Lloydminster, after all, is a place where a Liberal party sign is a slap across the face.</p>
+                        <p>“I know the election result last night was probably not what you had hoped for,” I typed before asking how he and the other residents are feeling.</p>
+                        <p>“It was a sad night for the west,” he replied a few days later. “Just found out that at the beginning of this week, Husky laid off several hundred employees that work in this area. That really hurts. Otherwise, we are doing OK.”</p>
+                        <p>But the situation will not improve overnight, and residents of Lloydminster know that.</p>
+                        <p>“If the Trans Mountain [expansion]…were put in place today, we're still three years away from being able to get the volume going,” said an agitated Spenrath back in the restaurant in Lloydminster. The surface of the mug of coffee on the table in front of him rippled as the table in front of him shook. “Frustration is the key word here.”</p>
+                        <p>Aalbers had a more measured, political way of putting it.</p>
+                        <p>“There's a wait and see attitude,” he said. “This isn't going to change in one day, one week, one month, one year. This is a long-term plan.”</p>
+                        <p>It’s hard not to hurt with people in Lloydminster when they speak wistfully about an economy that’s putting them out of work. It’s also hard not to see the catastrophic consequences of continuing to rely on hydrocarbons. Likewise, it’s difficult to imagine policy that appeases both groups.</p>
+                        <p>Perhaps the fraught Liberal policy simply reflects the difficulty of reassembling the pieces of a fractured country.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <section class="image-row">
+                        <img src="images/montreal/one.jpg" />
+                        <img src="images/montreal/two.jpg" />
+                        <img src="images/montreal/three.jpg" />
+
+                     </section>
+
+                    <section class="image-row">
+                        <img src="images/montreal/five.jpg" />
+                        <img src="images/montreal/six.jpg" />
+                        <img src="images/montreal/seven.jpg" />
+                        <img src="images/montreal/eight.jpg" />
+                     </section>
+
+                    <section class="image-row">
+                        <img src="images/montreal/nine.jpg" />
+                        <img src="images/montreal/ten.jpg" />
+                        <img src="images/montreal/eleven.jpg" />
+                        <img src="images/montreal/four.jpg" />
+                    </section>
+
+                    <section class="image-row">
+                        <img src="images/montreal/twelve.jpg" />
+                        <img src="images/montreal/thirteen.jpg" />
+                        <img src="images/montreal/fourteen.jpg" />
+                        <img src="images/montreal/fifteen.jpg" />
+                    </section>
+                    <div class="caption">More scenes from the climate march in Montréal. <span class="gray">Dexter McMillan/September 27, 2019</span></div>
+                </div>
+
+        <!-----------------------------------------------
+        Site Javascript
+        ------------------------------------------------->
+
+        <script src="divided.js"></script>
+
+        <!-----------------------------------------------
+        Bootstrap v4.1.3
+        ------------------------------------------------->
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!-----------------------------------------------
+        Assorted Libraries
+        ------------------------------------------------->
+
+        <!--VideoJS - For loading "animated images."-->
+        <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+        <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+
+        <!--WayPoints-->
+        <script src="libs/lg-thumbnail.min.js"></script>
+        <script src="libs/imagerow.min.js"></script>
+
+        <!--Modernizr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	</body>
+</html>
