@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 905"><defs><style>.cls-1{fill:#fff;opacity:0.3;}.cls-1,.cls-2{stroke:#000;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:8px;}</style></defs>
+	<g id="Grid">
+		<line id="Line1" class="cls-1" x1="98.5" y1="764.5" x2="1592.5" y2="764.5"/>
+		<line id="Line2" class="cls-1" x1="98.5" y1="693.5" x2="1592.5" y2="693.5"/>
+		<line id="Line3" class="cls-1" x1="98.5" y1="622.5" x2="1592.5" y2="622.5"/>
+		<line id="Line4" class="cls-1" x1="98.5" y1="551.5" x2="1592.5" y2="551.5"/>
+		<line id="Line5" class="cls-1" x1="98.5" y1="409.5" x2="1592.5" y2="409.5"/>
+		<line id="Line6" class="cls-1" x1="98.5" y1="480.5" x2="1592.5" y2="480.5"/>
+		<line id="Line7" class="cls-1" x1="98.5" y1="338.5" x2="1592.5" y2="338.5"/>
+		<line id="Line8" class="cls-1" x1="1592.5" y1="267.5" x2="98.5" y2="267.5"/>
+		<line id="Line9" class="cls-1" x1="98.5" y1="196.5" x2="1592.5" y2="196.5"/>
+		<line id="Line10" class="cls-1" x1="98.5" y1="835.5" x2="1592.5" y2="835.5"/>
+	</g>
+	<g id="Lines_2" data-name="Lines 2">
+		<polyline class="cls-2" points="1509 744 1367 505 1226 451 1153 552 1008 602 866 562 719 249 575 219 432 242 288 241 145 354 -12.1 489.76"/>
+	</g>
+</svg>

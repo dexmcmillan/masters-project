@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <head>
+        
+        <title>Reporter's Notes</title>
+        <meta property="og:title" content="A Crude Divide" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.dividedproject.com" />
+        <meta property="og:image" content="images/climatemarchmtl-1359.jpg" />
+        <meta property="og:description" content="A town in trouble, a changing climate, and the government's tightrope walk to fix both." />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="dextermcmillan.ca" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@dexmcmillan">
+        <meta name="twitter:creator" content="@dexmcmillan">
+        <meta name="twitter:title" content="A Crude Divide">
+        <meta name="twitter:description" content="A town in trouble, a changing climate, and the government's tightrope walk to fix both.">
+        <meta name="twitter:image" content="images/climatemarchmtl-1359.jpg">
+
+        <link href="divided.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        
+        <!-----------------------------------------------
+        jQuery
+        ------------------------------------------------->
+        
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        
+        <!--Popper-->
+        <script src='https://unpkg.com/popper.js'></script>
+        <script src='https://unpkg.com/tooltip.js'></script>
+        
+        <!-----------------------------------------------
+        Fonts
+        ------------------------------------------------->
+        
+        <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather|Lato|Libre+Baskerville|Playfair+Display:400,700,900|Raleway:bold" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/10c4434fb2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/sww7hnf.css">
+        
+        <!-----------------------------------------------
+        Bootstrap
+        ------------------------------------------------->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!-----------------------------------------------
+        ScrollMagic
+        ------------------------------------------------->
+        
+        <script src="libs/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="libs/animation.gsap.min.js"></script>
+        
+        <!-----------------------------------------------
+        Other
+        ------------------------------------------------->
+        
+        <script src="libs/jquery.lettering.js"></script>
+        <script src="libs/vivus.js"></script>
+        <script src="libs/vivus.min.js"></script>
+        
+        <script src="libs/lightgallery.js"></script>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121914472-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-121914472-2');
+        </script>
+        
+        
+    </head>
+
+    <body style="background-color:var(--primary-background-color);">
+        
+        <!-----------------------------------------------
+        Header and Intro
+        ------------------------------------------------->
+        <nav id="mainNav" class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="opacity:1.0">
+            <a class="navbar-brand d-none d-sm-block" href="index.html#"><img src="images/logo.png" style="width:40px;"></a>
+            <h3 id="navtext">Reporter's Notes</h3>
+            <div id="socialbar" class="ml-auto align-self-end d-none d-sm-block">
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20MRP%20by%20Dexter%20McMillan.">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.dividedproject.com/" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+            
+            <div class="dropdown" class="align-self-end d-none d-sm-block">
+                <button class="btn dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-custom animate slideIn" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="index.html#">Introduction</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.html#segment1">I. Mr. Lloydminster</a>
+                    <a class="dropdown-item" href="index.html#segment3">II. La Grève du Climat</a>
+                    <a class="dropdown-item" href="index.html#segment2">Elsewhere: The Green New Deal</a>
+                    <a class="dropdown-item" href="index.html#segment5">III. The Liberal Policy</a>
+                    <a class="dropdown-item" href="index.html#segment4">Elsewhere: The Scandinavian Way</a>
+                    <a class="dropdown-item" href="index.html#segment6">IV. Epilogue</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="notes.html">Reporter's Notes</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="segment container-fluid" style="padding-top:50px">
+            <div class="row justify-content-center">
+                <div class="titlerow col-lg-9">
+                    <h1 class="sectionhead" style="margin-top:100px; margin-bottom:20px"><span class="highlight">Notes</span><br></h1>
+                </div>
+            </div>
+            <div class="row text justify-content-center">
+                <div class="col-lg-7">
+
+                    <p>Please allow me to be self-indulgent. This has been a long project and I've earned it.</p>
+
+                    <p>What started as a project about the Green New Deal and how it was developing in Canada turned quickly into a long-term story about how we all rely on the oil and gas industry more than we think. It was reported over a year through wild events (COVID-19, I’m looking at you) that I could never have planned for. It took hundreds of hours of planning, reporting, writing and coding to bring together.</p>
+
+                    <p>I’m exhausted.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="img-box-horizontal col-lg-9">
+                    <img class="text-img" src="images/ticket.png" style="box-shadow: none;">
+                    <div class="caption">My ticket to the Green New Deal rally in Washington D.C.</div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p>But this project was also an incredible experience that will shape the kind of journalist I become. I learned about another side of Canada with which I have very little experience, and an industry that makes my head spin. I've long said that energy reporting is one of the most difficult beats for new reporters to learn, because it straddles so many fields: economics, politics, chemistry, biology... The list keeps going. I'm immensely thankful to start inching my way towards full understanding of Canada's relationship with oil.</p>
+
+                    <p>Two moments stand out as favourites while reporting this project.</p>
+
+                    <p>Montréal was one. I left for the march on a whim, and relentlessly tracked key figures through half a million people in the streets of one of my favourite cities on earth. I ran for blocks and blocks through thick crowds, happened upon Trudeau accidentally as I looked for Greta Thunberg, and made my way to the front of the march to join the legions of photographers looking for a shot of the Swedish teen. I pushed through them all to get the shot of Thunberg at the front, and felt time stop when I knew I had a shot I’ll always remember. In a way, this day was a culmination of all the skills I’ve learned in j-school the past two years.</p>
+
+                    <p>My time in Lloydminster was the second. I’ve never been driven to ask so many questions, both of others and of myself, than after my trip there. Growing up in BC and living in big cities outside Alberta for my entire life, issues affecting oil and gas workers and how we process this resources are abstract issues to me. Exploring the city and talking to the people there helped me understand what I thought was a no-brainer in a more nuanced way.</p>
+
+                    <p>I wrote every line of code for this project from scratch. No CMS. People regularly asked me why. I believe journalism owes a lot to good design and technology. Journalists have long known that the way you write or the way you photograph your stories matters - why don’t we put more care into how stories are arranged on the screen? I think this project is, in part, an answer to that question.</p>
+                </div>
+                <div class="col-md-9 img-box-horizontal">
+                    <img class="text-img" src="images/darrelldrawing.jpg">
+                    <div class="caption">Darrell Howell sketches a diagram of the upgrading process for me in Lloydminster. This sketch was adapted into a multimedia element. <span class="gray">Dexter McMillan/May 17, 2019</span></div>
+                </div>
+                <div class="col-lg-7">
+                    <p>A few people I need to thank:</p>
+                    
+                    <ul>
+                        <li><p>My supervisor, Sarah Everts, for her sharp editing skills and editorial guidance.</p></li>
+
+                        <li><p>The School of Journalism and Communication at Carleton University, for their generous award which funded most of this project, and for the chance to focus on building something I truly love for an entire year. It’s also thanks to many of my professors that I have learned to find joy in crafting a narrative with words. I'm forever appreciative of that.</p></li>
+
+                        <li><p>My sources in Lloydminster who took the time to speak to me and help me understand their world. It must be exhausting trying to introduce people like me to their reality. I appreciate that they took the time.</p></li>
+
+                        <li><p>Jeff, for help with the technical side of building this. I’m not sure what helped more: your understanding of how the web comes together, or your regular kind words about how this project was coming together.</p></li>
+
+                        <li><p>My parents, for eternal support no matter what projects I’m chasing in life, and my sister, for inspiring me with the passion she has for her work in her own field. I’m lucky to call them family, and I know that.</p></li>
+
+                        <div class="img-box-vertical-right col-lg-6">
+                            <img class="text-img" src="images/copenhill2.jpg" style="box-shadow: none;">
+                            <div class="caption">Caitlin holds up a guest pass for Copenhill before our tour of the facility. <span class="gray">Dexter McMillan/January 6, 2020</span></div>
+                        </div>
+
+                        <li><p>My partner, Caitlin, for supporting my move across the country to restart my career, and for always pushing aside whatever she was doing to help. Her design experience and critical eye were essential to this project coming together.</p></li>
+
+                        <li><p>And finally, to my friends and colleagues in my cohort. J-school was not easy, and each of them made it a little less difficult. Please go read and share their MRPs as well:</p>
+                            <ul>
+                                <li><p>
+                                    <p>
+                                        <a href="https://soundcloud.com/user-820443494/welcome-to-berlin/s-WMqlE3tVF1r" target="_blank" class="captionLink">Menaka Raman-Wilms - Welcome to Berlin (audio)</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <img src="images/oilborder2.png" style="width:100vw; z-index:1000; position:relative;">
+        </div>    
+
+        <!-----------------------------------------------
+        Site Javascript
+        ------------------------------------------------->
+        
+        <script src="divided.js"></script>
+        
+        <!-----------------------------------------------
+        Bootstrap v4.1.3
+        ------------------------------------------------->
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <!-----------------------------------------------
+        Assorted Libraries
+        ------------------------------------------------->
+        
+        <!--VideoJS - For loading "animated images."-->
+        <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+        <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+        
+        <!--Modernizr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    </body>
+</html>
